@@ -1,0 +1,5 @@
+# LCM-demo
+Lifecycle Management Demo
+
+- complete setting page to clean up after demo
+

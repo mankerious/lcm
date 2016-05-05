@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+ 
+gem 'gooddata', 'path' => './vendor/gooddata-ruby'
+gem 'ffi', '1.9.3', :platform => 'jruby'
+gem 'terminal-table'

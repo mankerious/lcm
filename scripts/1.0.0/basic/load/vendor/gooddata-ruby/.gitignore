@@ -1,0 +1,36 @@
+## MAC OS
+.DS_Store
+
+## TEXTMATE
+*.tmproj
+tmtags
+
+## EMACS
+*~
+\#*
+.\#*
+
+## VIM
+*.swp
+
+## IDEA
+.idea/
+
+## PROJECT::GENERAL
+.bundle
+coverage
+/rdoc
+/doc
+pkg
+
+## PROJECT::SPECIFIC
+Gemfile.lock
+
+# YARD
+.yardoc/
+
+# Local scripts
+.scripts/
+
+# Temp files
+tmp/

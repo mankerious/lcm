@@ -1,0 +1,61 @@
+
+form action="/service_projects" method="POST" align="left"
+
+  .row
+    .col-1of3
+     br
+     br
+     small.new  Step 1: Define Data Product
+     br
+     small.thick.active  Step 2: Activate Data Product
+     br
+     small.new  Step 3: Provision Customers
+     br
+     small.new  Step 4: Confirm
+     br
+
+    .col-2of3
+     br
+     img src="ABC_Retail.png" float="left"
+    .col-3of3
+     h1 ABC Retail Store Analytics
+     hr style="border-top: dotted 1px;"
+     h2 CUSTOMER MANAGEMENT DASHBOARD
+  .row
+    .col-1of2
+    .col-2of2
+
+     h2 Activate Your Data Product
+     small.italic '#{@segment.id}' segment successfully created!
+     br
+     small.italic master project 
+     small.italic href='#{FQDN}/#s=/gdc/projects/#{@master_project.pid}' '#{@master_project.title}'
+     small.italic< successfully created! 
+	 <a href="#{FQDN}/#s=/gdc/projects/#{@master_project.pid}">(details)</a>
+
+     /* h4 Schedule Processes*/
+     br
+     small  A service project will be created to automate data downloads, data preparation & your organization's user management
+     br
+     br
+     small.thick.tabbed Service Project Name:&nbsp &nbsp 
+   	 input  id="textinput" name="service_project_name"
+     br
+     hr style="border-top: dotted 1px;"
+     br
+     small Define another analytics project?
+     .col7 
+      input name="button_1" id="search-form" type="submit" value="Define New Product"
+     br
+     hr style="border-top: dotted 1px;"
+  .row
+     input name="button_2" id="search-form" value="Next" type="submit" 
+     a href="http://localhost:4567" id="cancel" Cancel 
+
+  .row
+     .col-2
+     .col-3
+     .col-4
+        img src="diagram_step2.png" float="right"
+
+

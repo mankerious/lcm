@@ -1,0 +1,46 @@
+
+form action="/index" method="POST" align="left"
+
+  .row
+    .col-1of3
+     br
+     br
+     small.new  Step 1: Define Data Product
+     br
+     small.new  Step 2: Activate Data Product
+     br
+     small.new  Step 3: Provision Customers
+     br
+     small.thick.active  Step 4: Confirm
+     br
+
+    .col-2of3
+     br
+     img src="ABC_Retail.png" float="left"
+    .col-3of3
+     h1 ABC Retail Store Analytics
+     hr style="border-top: dotted 1px;"
+     h2 CUSTOMER MANAGEMENT DASHBOARD
+  .row
+    .col-1of2
+    .col-2of2
+
+     h2 Confirmation
+     small.italic All customer projects have been successfully created!
+     br
+     br
+     div.confirmation_projects_list
+       small Project list:
+       - @projects.each do |item|
+          div
+            small.new.active #{item[:segment].id}
+            a href="#{item[:project].browser_uri}" target="_blank" #{item[:project].title} (#{item[:project].pid})
+         
+     / select name="projectid" style="margin-left:0px"
+       / option value="" disabled="selected">Select one..</option>
+      / - @projects.each do |project|
+        / option value=project.pid #{project.pid + " " + project.title}
+
+  .row
+     button id="search-form" type="submit" Close
+     a href="http://localhost:4567" id="cancel" Cancel

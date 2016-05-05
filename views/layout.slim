@@ -1,0 +1,26 @@
+/*Layout.slim provides all the html scaffolding and will be included with every view*/
+doctype html 
+html 
+  head 
+   / A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.
+     The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+     The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.*/
+   
+   meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"
+    title Lifecycle Management 
+    link rel="stylesheet" type="text/css" media="screen, projection" href="lcm.css" 
+    /[if lt IE 9] 
+      script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" 
+
+
+    .full-width
+     a href="http://localhost:4567"
+      img src="https://developer.gooddata.com/themes/site_themes/developer2012/img/Developer_header.png" float="left"
+    
+    br
+    br
+    br
+    br
+    a href="http://localhost:4567/settings" id="righttext" settings
+
+== yield

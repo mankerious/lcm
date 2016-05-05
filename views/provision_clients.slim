@@ -1,0 +1,73 @@
+
+form action="/provision_clients" method="POST" align="left"
+
+  .row
+    .col-1of3
+     br
+     br
+     small.new  Step 1: Define Data Product
+     br
+     small.new  Step 2: Activate Data Product
+     br
+     small.thick.active  Step 3: Provision Customers
+     br
+     small.new  Step 4: Confirm
+     br
+
+    .col-2of3
+     br
+     img src="ABC_Retail.png" float="left"
+    .col-3of3
+     h1 ABC Retail Store Analytics
+     hr style="border-top: dotted 1px;"
+     h2 CUSTOMER MANAGEMENT DASHBOARD
+  .row
+    .col-1of2
+    .col-2of2
+
+     h2 Provision Customers
+     / small.italic '#{@service_project.title}' service project successfully created!
+     / small.italic  service project successfully created!
+     / <a href="#{FQDN}/admin/disc/#/projects/#{@service_project.pid}">(manage schedules)</a>
+     /*h4 Provision Client Workspaces*/
+     br
+     small Enter customer names and map to segments below:
+     br
+     br
+   	 input>  id="textinput" name="client_name[]"
+     select name="segment_id[]" style="margin-left:0px"
+       option value="" disabled="disabled" Select Segment..
+       - @segments.each do |seg|
+        option value=seg[:segment_id] #{seg[:segment_id]}
+     br
+     br
+     input>  id="textinput" name="client_name[]"
+     select name="segment_id[]" style="margin-left:0px" 
+       option value="" disabled="disabled" Select Segment..
+       - @segments.each do |seg|
+        option value=seg[:segment_id] #{seg[:segment_id]}
+     br
+     br
+     input>  id="textinput" name="client_name[]"
+     select name="segment_id[]" style="margin-left:0px" 
+       option value="" disabled="disabled" Select Segment..
+       - @segments.each do |seg|
+        option value=seg[:segment_id] #{seg[:segment_id]}
+     br
+     br
+     small or add more clients in bulk using 
+     small.blue CSV association  
+
+     br
+     hr style="border-top: dotted 1px;"
+  .row
+     button id="search-form" type="submit" Next
+     a href="http://localhost:4567" id="cancel" Cancel 
+  .row
+     .col-2
+     .col-3
+     .col-4
+        img src="diagram_step3.png" float="right"
+
+
+

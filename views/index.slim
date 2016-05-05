@@ -1,0 +1,65 @@
+
+form action="/index" method="POST" align="left"
+
+  .row
+    .col-1of3
+     br
+     br
+     small.thick.active  Step 1: Define Data Product
+     br
+     small.new  Step 2: Activate Data Product
+     br
+     small.new  Step 3: Provision Customers
+     br
+     small.new  Step 4: Confirm
+     br
+
+    .col-2of3
+     br
+     img src="ABC_Retail.png" float="left"
+    .col-3of3
+     h1 ABC Retail Store Analytics
+     hr style="border-top: dotted 1px;"
+     h2 CUSTOMER MANAGEMENT DASHBOARD
+  .row
+    .col-1of2
+    .col-2of2
+
+     - if @errors.blank?
+       
+     - else
+       div.errors #{@errors}
+       
+
+     h2 Define Your Data Products
+     small  A data product includes all the necessary components to deliver analytics to a store as well as processes for data distribution, reports, metrics, dashboards. Create a new data product for each of the store segments
+     br
+     br
+     small.tabbed Data Product Name:&nbsp &nbsp 
+   	 input  id="textinput" name="segment_name"
+     br
+     br
+     small.tabbed Data Product Master: &nbsp 
+
+     select name="projectid" style="margin-left:0px" 
+          # - client = GoodData.connect(LOGIN, PASSWORD, server: FQDN, verify_ssl: false )
+          <option value="" disabled selected>Select one..</option>
+           / option  value="basic blueprint" Create using Basic blueprint
+           / option  value="premium blueprint" Create using Premium blueprint
+          - @projects.each do |project|
+           option value="#{project.pid}" #{project.title}
+     br
+     br
+     hr style="border-top: dotted 1px;"
+  .row
+     button id="search-form" type="submit" Next
+     a href="http://localhost:4567" id="cancel" Cancel 
+
+  .row
+
+     .col-2
+     .col-3
+     .col-4
+        img src="diagram_step1.png" float="right"
+
+
